@@ -19,12 +19,12 @@
 
             </a> -->
             <!-- start of corner texture -->
-            <div id="topRightCornerTexture" class="absolute  w-20 -z-10 transition-all duration-500 -top-20 -right-20">
+            <div id="topRightCornerTexture" class="absolute  w-12 -z-10 transition-all duration-500 -top-20 -right-20">
                 <img src="/assets/img/corner-texture.png" alt="corner texture"
                     class="w-full h-full object-cover object-top-right">
             </div>
             <!-- bottom left -->
-            <div id="bottomLeftCornerTexture" class="absolute -bottom-20 -left-32 w-20 -z-10 transition-all duration-500">
+            <div id="bottomLeftCornerTexture" class="absolute -bottom-20 -left-32 w-12 -z-10 transition-all duration-500">
                 <img style="  transform: scaleY(-1) rotate(90deg);filter: FlipV;" src="/assets/img/corner-texture.png" alt="corner texture"
                     class="w-full h-full object-cover object-bottom-left">
             </div>
@@ -32,7 +32,7 @@
 
             <div id="main"
                 class="flex flex-col relative min-h-[100svh] w-full text-white pt-20
-                pb-32 font-spaceMono snap-start overflow-hidden">
+                pb-20 font-spaceMono snap-start overflow-hidden">
                 <!-- <div
                     class="absolute w-full min-h-[100svh] h-full max-h-screen max-w-lg -z-10 left-0 lg:left-1/2 lg:-translate-x-1/2 top-0 bg-running-red/70">
                 </div> -->
@@ -57,8 +57,8 @@
                         </div> -->
                     </div>
                     <div class="text-center px-2 flex flex-col gap-y-4">
-                        <p class="text-xl font-extrabold">You're Officially Invited to FLAG-OFF DAY!</p>
-                        <p class="font-normal text-normal px-4">Running Dept Proudly Presents the grand opening of Our First Concept Store, a home full of experience built for runners, communities, and podium chaser. It's time to step into your running home.</p>
+                        <p class=" text-lg font-extrabold">You're Officially Invited to FLAG-OFF DAY!</p>
+                        <p class="font-normal text-sm px-4">Running Dept Proudly Presents the grand opening of Our First Concept Store, a home full of experience built for runners, communities, and podium chaser. It's time to step into your running home.</p>
                     </div>
                 </div>
                 <div id="registerBtnGroup" class="transition-all duration-1000 opacity-0">
@@ -75,7 +75,6 @@
             <div id="maps"
                 class="h-[100svh] w-full snap-start flex flex-col items-center relative font-inter text-white text-center bg-running-red overflow-y-hidden">
                 <img src="/assets/img/maps.png" alt="maps" class="h-full absolute object-fill">
-                <img id="mapPinPoint" src="/assets/img/map-pin-point.png" alt="maps" class="w-40 absolute left-20 top-1/2 -translate-y-36 opacity-0 transition-all duration-700 delay-300">
                 <img id="mapCaution" src="/assets/img/map-caution.png" alt="map caution" class="absolute bottom-20 left-1/2 -translate-x-1/2 w-[90%] bg-white/10 backdrop-blur-sm opacity-0 transition-all duration-700 delay-700">
                 <!-- <div class="flex-grow h-full flex items-center">
                     <div id="mapsImg" class="overflow-hidden transition-all duration-1000 h-full">
@@ -96,12 +95,12 @@
                 class="relative min-h-[100svh] w-full transition-all duration-1000 snap-start overflow-hidden font-spaceMono uppercase">
                 <div class="absolute top-0 left-0 min-h-[100svh] h-full max-h-screen w-full -z-10 bg-white"></div>
                 <!-- start of corner texture for form -->
-                <div id="formTopRightCornerTexture" class="absolute w-20 transition-all duration-500 delay-500 -top-20 -right-20">
+                <div id="formTopRightCornerTexture" class="absolute w-12 transition-all duration-500 delay-500 -top-20 -right-20">
                     <img src="/assets/img/corner-texture-red.png" alt="corner texture"
                         class="w-full h-full object-cover object-top-right">
                 </div>
                 <!-- bottom left -->
-                <div id="formBottomLeftCornerTexture" class="absolute -bottom-20 -left-32 w-20 transition-all duration-500 delay-500">
+                <div id="formBottomLeftCornerTexture" class="absolute -bottom-20 -left-32 w-12 transition-all duration-500 delay-500">
                     <img style="transform: scaleY(-1) rotate(90deg);filter: FlipV;" src="/assets/img/corner-texture-red.png" alt="corner texture"
                         class="w-full h-full object-cover object-bottom-left">
                 </div>
@@ -160,7 +159,7 @@
                                     class="block w-full py-3 transition-all bg-white border focus:border-2 border-running-red/70 focus:border-running-red text-running-red placeholder-running-red text-center focus:placeholder-transparent" value="0" max="2" />
                                 </div>
                                 <button id="submitBtn" type="button"
-                                    class=" block w-full py-6 bg-running-red text-white transition-all mt-8 mb-10 text-xl">SUBMIT</button>
+                                    class=" block w-full py-4 bg-running-red text-white transition-all mt-8 mb-10 text-xl">SUBMIT</button>
                             </div>
                         </div>
                     </div>
@@ -200,7 +199,6 @@
         const timelineTitle = document.getElementById("timelineTitle");
         const timelineRundown = document.getElementById("timelineRundown");
         const timelineLogos = document.getElementById("timelineLogos");
-        const mapPinPoint = document.getElementById("mapPinPoint");
         const mapCaution = document.getElementById("mapCaution");
         let timelineRevealed = false;
         let mapsRevealed = false;
@@ -264,9 +262,6 @@
             if (isMapsVisible && !mapsRevealed) {
                 mapsRevealed = true;
                 setTimeout(() => {
-                    mapPinPoint.classList.remove("opacity-0");
-                }, 200);
-                setTimeout(() => {
                     mapCaution.classList.remove("opacity-0");
                 }, 500);
             }
@@ -290,7 +285,7 @@
 
         maps.addEventListener("click",(e) => {
             e.preventDefault();
-            window.open("https://maps.app.goo.gl/6HRuTv2eBUh4ri7L7?g_st=ipc", "_blank");
+            window.open("https://maps.app.goo.gl/mjoX3hEHbbRryWGg6?g_st=ic", "_blank");
         })
 
         const popup = Swal.mixin({
@@ -414,7 +409,7 @@
                 if (res.ok) {
                     popup.fire({
                         title: `<span class="font-inter font-bold text-[#040404]">Thank you!</span>`,
-                        html: `<div class="text-sm -mt-4"><p class="font-inter">Check your email for your <b>RSVP Number</b></p><p class="font-inter">Your submission is valid for 1 person only.</p><p class="font-inter">Don’t forget to wear your favorite football jersey, get dressed and impress on the Kick Off Day!</p></div>`,
+                        html: `<div class="text-sm -mt-4"><p class="font-inter">Check your email for your <b>RSVP Number</b></p><p class="font-inter">Your submission is valid for 1 person only.</p><p class="font-inter">Just show up because you better RUN!</p></div>`,
                         imageUrl: "/assets/icon/check.svg",
                         confirmButtonText: `<span class="font-inter">Close</span>`
                     });

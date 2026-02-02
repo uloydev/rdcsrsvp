@@ -30,7 +30,7 @@ class ParticipantVerification extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'The Kick Off Day - Verification Email',
+            subject: 'Flag Off Day - Verification Email',
         );
     }
 

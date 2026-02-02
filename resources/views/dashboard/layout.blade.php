@@ -31,7 +31,7 @@
                     class="inline h-full max-w-full transition-all duration-200 ease-nav-brand max-h-6"
                     alt="main_logo" />
                 <span
-                    class="ml-1 font-semibold transition-all duration-200 ease-nav-brand inline-block text-center text-base">FDCS RSVP</span>
+                    class="ml-1 font-semibold transition-all duration-200 ease-nav-brand inline-block text-center text-base">RDCS RSVP</span>
             </a>
         </div>
 
