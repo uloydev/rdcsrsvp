@@ -1,0 +1,21 @@
+@config '../../tailwind.dashboard.config.js';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link.active {
+    @apply text-slate-700 font-semibold bg-blue-500/25
+}
+
+
+table th.active {
+    @apply text-violet-700 dark:text-violet-300;
+}
+
+table th.sortable {
+    @apply cursor-pointer hover:text-violet-700 hover:dark:text-violet-300 select-none;
+}
+
+table th .direction.active {
+    @apply !visible
+}
